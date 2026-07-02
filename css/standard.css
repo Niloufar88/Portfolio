@@ -1,0 +1,25 @@
+/* ROOT COLORS*/
+:root {
+  --primary-color-text-light: rgba(248, 249, 250, 1);
+  --primary-color-text-dark: rgba(38, 46, 52, 1);
+  --text-color-inactive: rgba(38, 46, 52, 0.12);
+  --secondary-text-color-light: rgba(248, 245, 236, 1);
+  --text-blue-color: rgba(137, 188, 217, 1);
+
+  --primary-color-v1: rgba(249, 203, 113, 1);
+  --primary-color-v2: rgba(137, 188, 217, 1);
+  --primary-color-v2-hover: rgba(108, 166, 199, 1);
+  --primary-color-background: rgba(38, 46, 52, 1);
+  --secondary-color: rgba(255, 255, 255, 1);
+  --text-hover-color-background: rgba(38, 46, 52, 0.12);
+  --error-color: rgba(228, 76, 54, 1);
+  --done-color: rgba(151, 225, 99, 1);
+  --arrow-hover-backgaround: rgba(137, 188, 217, 0.07);
+}
+
+/* ROOT CONFIGS*/
+:root {
+  --hero-button-font-size: 1.25rem;
+  --hero-button-weight: 700;
+  --hero-button-line-height: 120%;
+}

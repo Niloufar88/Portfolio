@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Anta";
+  src: url("../assets/fonts/Anta/Anta-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.anta {
+  font-family: "Anta", sans-serif;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("../assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+}
+
+.josefin-sans {
+  font-family: "Josefin Sans", sans-serif;
+}

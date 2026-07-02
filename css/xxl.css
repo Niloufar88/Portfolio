@@ -1,0 +1,223 @@
+body {
+  width: 100%;
+  height: auto;
+  background-color: var(--primary-color-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* HERO SECTION */
+.hero {
+  width: 1440px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-main-container {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.hero-profile-container {
+  /* width: 50%; */
+  height: 100vh;
+  background-color: yellow;
+}
+
+.hero-content-container {
+  /* width: 50%; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 120px;
+}
+
+.hero-social-media-container {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.hero-social-media-container img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-social-media-container img:hover#email {
+  content: url("../assets/components/hero-section/icons/EMail-hover-blue.png");
+}
+
+.hero-social-media-container img:hover#github {
+  content: url("../assets/components/hero-section/icons/GitHub-hover-blue.png");
+}
+
+.hero-social-media-container img:hover#linkedin {
+  content: url("../assets/components/hero-section/icons/linkedIn-hover-blue.png");
+}
+
+.logo-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.logo-content .hero-logo {
+  cursor: pointer;
+  transition: transform 400ms ease-in-out;
+  /* filter 200ms ease-in-out; */
+}
+
+.logo-content .hero-logo:hover {
+  content: url("../assets/components/hero-section/icons/Logo-hover.png");
+  transform: scaleX(1.02);
+  /* filter: drop-shadow(0 0 10px rgba(60, 116, 251, 0.45)); */
+}
+
+.logo-content .dev-name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--secondary-text-color-light);
+}
+
+.logo-content .dev-role {
+  color: var(--text-blue-color);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: lowercase;
+}
+
+.text-content {
+  /* width: 60%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-content .name {
+  font-size: 80px;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--secondary-text-color-light);
+  /* letter-spacing: 1px; */
+}
+
+.text-content .role {
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--secondary-text-color-light);
+  margin: 16px 0 120px;
+}
+
+.arrow-down {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.arrow-down img:hover#arrow-down {
+  content: url("../assets/components/hero-section/icons/arrow-down-hover.png");
+}
+
+/* HEADER SECTION*/
+.header {
+  width: 1440px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-blue-color);
+}
+
+.header-container {
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-dev-name {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: var(--secondary-text-color-light);
+}
+
+.header-dev-role {
+  color: var(--primary-color-background);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 120%;
+  text-transform: lowercase;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 32px; */
+}
+
+.header-menu nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.header-menu nav .header-link {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 120%;
+  color: var(--primary-color-text-dark);
+  transition: all 0.3s ease-in-out;
+}
+
+.header-menu nav .header-link:hover {
+  color: var(--secondary-text-color-light);
+}
+
+.header-language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.header-language .header-language-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
