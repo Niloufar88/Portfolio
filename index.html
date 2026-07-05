@@ -12,12 +12,11 @@
       <section class="hero" id="hero-section">
         <div class="hero-main-container">
           <div class="hero-profile-container">
-            <!-- <img
-              class="photo-bg"
-              src="assets/components/hero-section/photo-bg-shape.svg"
+            <img
+              src="assets/components/hero-section/photo-bg-default.png"
               alt=""
             />
-            <img class="dev-photo" src="" alt="" /> -->
+            <img src="assets/img/dev-photo.png" alt="" />
           </div>
           <div class="hero-content-container">
             <div class="logo-content">
@@ -40,23 +39,26 @@
                 alt="arrow-down"
               />
             </a>
-          </div>
-          <div class="hero-social-media-container">
-            <img
-              id="email"
-              src="assets/components/hero-section/icons/Email-default.png"
-              alt="E-Mail"
-            />
-            <img
-              id="github"
-              src="assets/components/hero-section/icons/Git-default.png"
-              alt="GitHub"
-            />
-            <img
-              id="linkedin"
-              src="assets/components/hero-section/icons/LinkedIn-default.png"
-              alt="LinkedIn"
-            />
+            <div class="hero-social-media-container">
+              <a href=""
+                ><img
+                  id="email"
+                  src="assets/components/hero-section/icons/Email-default.png"
+                  alt="E-Mail"
+              /></a>
+              <a href=""
+                ><img
+                  id="github"
+                  src="assets/components/hero-section/icons/Git-default.png"
+                  alt="GitHub"
+              /></a>
+              <a href=""
+                ><img
+                  id="linkedin"
+                  src="assets/components/hero-section/icons/LinkedIn-default.png"
+                  alt="LinkedIn"
+              /></a>
+            </div>
           </div>
         </div>
       </section>
@@ -91,36 +93,34 @@
       <!-- ABOUT ME -->
       <section class="about-me" id="why-me">
         <div class="about-me-container">
-          <h2 class="about-me-title anta">why Me</h2>
+          <h2 class="section-title anta">why Me</h2>
           <div class="about-me-context">
-            <div class="about-me-animation">
+            <div class="about-me-animation hidden">
               <div>
-                <img
-                  class="about-me-icon"
-                  src="assets/components/why me/location-icon.png"
-                  alt=""
-                />
+                <img class="about-me-icon" src="" alt="" />
               </div>
-              <span class="about-me-typing josefin-sans">ich bin </span>
-              <span class="about-me-typing josefin-sans"
-                >in Teheran zuHause</span
-              >
-              <span class="about-me-typing josefin-sans">...|</span>
+              <span class="about-me-typing josefin-sans fp"></span>
+              <span class="about-me-typing josefin-sans sp"></span>
+              <span class="about-me-typing josefin-sans tp"></span>
             </div>
             <div class="about-me-text">
               <p class="text josefin-sans">
-                Alles beginnt mit einer Idee. <br />
-                Aus ihr etwas Wirkliches entstehen zu lassen – genau darin liegt
-                für mich die Magie des Programmierens. <br />
-                Es geht nicht darum, einfach nur Webseiten zu bauen. Es geht
-                darum, Herausforderungen anzunehmen, Lösungen zu entdecken und
-                weiterzumachen, wenn der Weg nicht sofort sichtbar ist. <br />
-                Denn jeder Fehler erzählt eine Geschichte, jede Sackgasse
-                eröffnet eine neue Perspektive und jedes Problem trägt seine
-                Lösung bereits in sich. <br />
-                Frontend-Entwicklung ist für mich der Ort, an dem Kreativität
-                auf Logik trifft. Dort entstehen Erlebnisse, die die Menschen
-                begeistern – eine Zeile Code nach der anderen.
+                Everything begins with an idea. <br />
+
+                What fascinates me most about programming is turning that idea
+                into something real—something people can see, use, and
+                experience.<br />
+
+                To me, coding is about solving puzzles, embracing challenges,
+                and finding a way forward even when the solution isn't
+                obvious.<br />
+
+                Every bug has something to teach. Every dead end reveals a new
+                perspective. Every problem holds the potential for its own
+                solution—you just have to keep looking. <br />
+
+                In the end, great software isn't just built. It's crafted—one
+                line of code at a time.
               </p>
               <button class="about-me-button josefin-sans">Let’s talk</button>
             </div>
@@ -129,20 +129,155 @@
       </section>
 
       <!-- SKILLS SECTION -->
-      <section class="skills" id="skills"></section>
+      <section class="skills" id="skills">
+        <div class="skills-container">
+          <h2 class="section-title anta">my skills</h2>
+          <div class="skills-context">
+            <div class="skills-icons">
+              <img
+                src="assets/components/skills/Property 1=CSS.png"
+                alt="CSS"
+              />
+              <img
+                src="assets/components/skills/Property 1=Firebase.png"
+                alt="firebase"
+              />
+              <img
+                src="assets/components/skills/Property 1=GIT.png"
+                alt="GIT"
+              />
+              <img
+                src="assets/components/skills/Property 1=HTML.png"
+                alt="HTML"
+              />
+              <img
+                src="assets/components/skills/Property 1=JavaScript.png"
+                alt="JS"
+              />
+              <img
+                src="assets/components/skills/Property 1=Rest-Api.png"
+                alt="rest-API"
+              />
+              <img
+                src="assets/components/skills/Property 1=Scrum.png"
+                alt="Scrum"
+              />
+            </div>
+            <div class="bubble-text">
+              <div class="bubble">
+                <img
+                  src="assets/components/skills/skills-bg-hover.png"
+                  alt=""
+                />
+              </div>
+              <div class="skill-text">
+                <p class="josefin-sans">i am currently learning</p>
+                <div class="in-progress-container">
+                  <div class="in-progeress-skills">
+                    <img src="assets/components/skills/Angular.png" alt="" />
+                    <h4 class="text-explanation josefin-sans">Angular</h4>
+                  </div>
+                  <div class="in-progeress-skills">
+                    <img src="assets/components/skills/typeScript.png" alt="" />
+                    <h4 class="text-explanation josefin-sans">TypeScript</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- PROJECTS SECTION -->
       <section class="projects" id="projects"></section>
 
+      <!-- REFERENCE SECTION -->
+      <section class="references" id="references">
+        <div class="reference-container">
+          <h2 class="reference-title josefin-sans">
+            Need a teamplayer? Here’s what my colleagues say about me
+          </h2>
+          <div class="bubble-boxes">
+            <div class="bubble-content josefin-sans">
+              <h3 class="ref-name">Sahra Mueller</h3>
+              <h4 class="ref-project">
+                Project <a href="#" class="ref-link">DA Bublle</a>
+              </h4>
+              <p class="ref-comment">
+                ‘’Claudia had to develop, format and deliver content in
+                collaboration with the team members. She is a reliable and
+                friendly person.’’
+              </p>
+              <a href="#" class="ref-link">Linked In Profile</a>
+            </div>
+
+            <div class="bubble-content josefin-sans">
+              <h3 class="ref-name">James Rugman</h3>
+              <h4 class="ref-project">
+                Project <a href="#" class="ref-link">Join</a>
+              </h4>
+              <p class="ref-comment">
+                ‘’Claudia is a reliable and friendly person. Works in a
+                structured way and write a clear code. I recommend her as a
+                colleague.’’
+              </p>
+              <a href="#" class="ref-link">Linked In Profile</a>
+            </div>
+
+            <div class="bubble-content josefin-sans">
+              <h3 class="ref-name">Evelyn Marx</h3>
+              <h4 class="ref-project">
+                Project <a href="#" class="ref-link">Sharkie</a>
+              </h4>
+              <p class="ref-comment">
+                ‘’ She is a trustworthy teamplayer and can cope with the stress
+                of deadlines. Structured work and clear code. ‘’
+              </p>
+              <a href="#" class="ref-link">Linked In Profile</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- CONTACT SECTION -->
       <section class="contact" id="contact"></section>
     </main>
+
+    <!-- FOOTER -->
     <footer>
       <div class="footer-content-container">
-        <div class="legal-notice"></div>
-        <div class="footer-logo"></div>
-        <div class="footer-social-media"></div>
+        <div class="legal-notice">
+          <a href="#" class="footer-link josefin-sans">legal notice</a>
+          <span class="footer-copyright josefin-sans"
+            >&copy; Niloufar Shirvani 2026</span
+          >
+        </div>
+        <div class="footer-logo">
+          <img
+            src="assets/components/header/header-logo.png"
+            alt=""
+            class="footer-logo"
+          />
+          <span class="footer-dev-name anta">N.Shirvani</span>
+          <span class="footer-dev-role josefin-sans">developer</span>
+        </div>
+        <div class="footer-social-media">
+          <a href="#"
+            ><img src="assets/components/footer/git-dark-default.png" alt=""
+          /></a>
+          <a href="#"
+            ><img src="assets/components/footer/email-dark-default.png" alt=""
+          /></a>
+          <a href="#"
+            ><img
+              src="assets/components/footer/linkedIn-dark-default.png"
+              alt=""
+          /></a>
+        </div>
       </div>
     </footer>
+
+    <!-- JS -->
+    <script src="/scripts/script.js"></script>
   </body>
 </html>
