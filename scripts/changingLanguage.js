@@ -9,6 +9,7 @@ const translations = {
     firstSectionTitle: "wieso ich",
     aboutMeText:
       "Alles beginnt mit einer Idee. <br /> Was mich am Programmieren am meisten fasziniert, ist die Fähigkeit, diese Idee in etwas Reales zu verwandeln – etwas, das Menschen sehen, nutzen und erleben können.<br /> Für mich bedeutet Codieren, Rätsel zu lösen, Herausforderungen anzunehmen und einen Weg nach vorne zu finden, selbst wenn die Lösung nicht offensichtlich ist. <br /> Jeder Bug hat uns etwas beizubringen. Jede Sackgasse eröffnet eine neue Perspektive. Jedes Problem birgt das Potenzial für seine eigene Lösung – man muss nur weiter danach suchen. <br />Am Ende wird großartige Software nicht einfach nur gebaut. Sie wird handgefertigt – Zeile für Zeile.",
+    aboutMeBtn: "lass uns reden",
     headerDevRole: "entwicklerin",
   },
   en: {
@@ -21,6 +22,7 @@ const translations = {
     firstSectionTitle: "why Me",
     aboutMeText:
       "Everything begins with an idea.<br />  What fascinates me most about programming is turning that idea into something real—something people can see, use, and experience. <br />To me, coding is about solving puzzles, embracing challenges, and finding a way forward even when the solution isn't obvious. <br />Every bug has something to teach. Every dead end reveals a new perspective. Every problem holds the potential for its own solution—you just have to keep looking.<br /> In the end, great software isn't just built. It's crafted—one line of code at a time.",
+    aboutMeBtn: "Let’s talk",
     headerDevRole: "developer",
   },
 };

@@ -373,7 +373,7 @@ main {
   justify-content: flex-start;
   align-items: center;
   gap: 50px;
-  scroll-margin-top: 100px;
+  /* scroll-margin-top: 100px; */
   /* margin-top: 380px; */
 }
 
@@ -470,7 +470,7 @@ main {
   justify-content: flex-start;
   align-items: center;
   gap: 65px;
-  scroll-margin-top: 100px;
+  /* scroll-margin-top: 100px; */
 }
 
 .skills-context {
