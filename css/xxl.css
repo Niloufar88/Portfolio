@@ -15,6 +15,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 /* HERO SECTION */
@@ -38,29 +39,65 @@ main {
   padding-top: 80px;
   flex: 1;
   height: 100%;
+  width: 100%;
   position: relative;
-  max-width: 750px;
-  max-height: 530px;
+  /* max-width: 750px;
+  max-height: 530px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url("../assets/components/hero-section/photo-bg-default.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; */
+  cursor: pointer;
   /* vertical-align: bottom; */
 }
 
-.hero-profile-container img {
+.hero-profile-container::before {
   position: absolute;
-  /* top: 0;
-  left: 0; */
-  /* width: 100%; */
-  height: 100%;
-}
-
-.hero-profile-container img:nth-of-type(1) {
-  transform: rotate(-45deg);
+  top: 115;
+  left: 0;
   width: 90%;
-  height: 90%;
+  height: 80%;
+  content: "";
+  background-image: url("../assets/components/hero-section/photo-bg-default.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(-45deg);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
 }
 
-.hero-profile-container img:nth-of-type(2) {
-  top: 0;
+.hero-profile-container:hover::before {
+  background-image: url("../assets/components/hero-section/photo-bg-hover.png");
+  background-size: contain;
 }
+
+/* .hero-profile-container img:nth-of-type(1) {
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 60px;
+  left: 10px;
+  width: 90%;
+  height: 110%;
+} */
+
+.hero-profile-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* position: absolute;
+  top: -25px;
+  left: 9%; */
+  /* width: 100%; */
+}
+
+/* .hero-profile-container img:nth-of-type(2) {
+  top: 0;
+} */
 
 .hero-content-container {
   flex: 1;
@@ -94,15 +131,15 @@ main {
 }
 
 .hero-social-media-container img:hover#email {
-  content: url("../assets/components/hero-section/icons/EMail-hover-blue.png");
+  content: url("../assets/components/hero-section/icons/email-hover-blue.svg");
 }
 
 .hero-social-media-container img:hover#github {
-  content: url("../assets/components/hero-section/icons/GitHub-hover-blue.png");
+  content: url("../assets/components/hero-section/icons/git-hover-blue.svg");
 }
 
 .hero-social-media-container img:hover#linkedin {
-  content: url("../assets/components/hero-section/icons/linkedIn-hover-blue.png");
+  content: url("../assets/components/hero-section/icons/linkedIn-hover-blue.svg");
 }
 
 .logo-content {
@@ -120,7 +157,7 @@ main {
 }
 
 .logo-content .hero-logo:hover {
-  content: url("../assets/components/hero-section/icons/Logo-hover.png");
+  content: url("../assets/components/hero-section/icons/Logo-hover.svg");
   transform: scaleX(1.02);
   /* filter: drop-shadow(0 0 10px rgba(60, 116, 251, 0.45)); */
 }
@@ -170,7 +207,7 @@ main {
 }
 
 .arrow-down img:hover#arrow-down {
-  content: url("../assets/components/hero-section/icons/arrow-down-hover.png");
+  content: url("../assets/components/hero-section/icons/arrow-down-hover.svg");
 }
 
 /* HEADER SECTION*/
@@ -181,6 +218,13 @@ main {
   align-items: center;
   justify-content: center;
   background-color: var(--text-blue-color);
+  z-index: 100;
+}
+
+.header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .header-container {
@@ -189,7 +233,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 100;
 }
 
 .header-logo {
@@ -228,12 +271,20 @@ main {
   gap: 80px;
 }
 
-.header-menu nav .header-link {
-  text-decoration: none;
+.header-menu nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.header-menu nav ul .header-link {
+  list-style-type: none;
   text-transform: capitalize;
   font-weight: 500;
   font-size: 26px;
   line-height: 120%;
+  cursor: pointer;
   color: var(--primary-color-text-dark);
   transition: all 0.3s ease-in-out;
 }
@@ -242,19 +293,42 @@ main {
   color: var(--secondary-text-color-light);
 }
 
-.header-language {
+.lang-switcher {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 20px;
 }
 
-.header-language .header-language-text {
+.lang-switcher a {
+  text-decoration: none;
+  color: var(--primary-color-text-dark);
   font-size: 18px;
   font-weight: 400;
   line-height: 120%;
   text-transform: uppercase;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.lang-switcher a:hover {
+  color: var(--secondary-text-color-light);
+}
+
+.lang-switcher a.active::before {
+  position: absolute;
+  top: -4px;
+  left: -6px;
+  width: 147%;
+  height: 110%;
+  content: "";
+  background-image: url("../assets/components/header/lang-active-bg.png");
+  transform: rotate(-2deg);
+}
+
+.lang-switcher .header-language-text.active {
+  color: var(--secondary-text-color-light);
 }
 
 /* ABOUT ME SECTION */
@@ -269,12 +343,14 @@ main {
 
 .about-me-container {
   width: 1200px;
-  height: calc(100% - 100px);
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 50px;
+  scroll-margin-top: 100px;
+  /* margin-top: 380px; */
 }
 
 .section-title {
@@ -308,7 +384,7 @@ main {
   text-align: left;
 }
 
-.about-me-button {
+/* .about-me-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,7 +401,7 @@ main {
 
 .about-me-button:hover {
   background-color: var(--button-hover-background);
-}
+} */
 
 .about-me-animation {
   width: 480px;
@@ -363,12 +439,13 @@ main {
 
 .skills-container {
   width: 1200px;
-  height: calc(100% - 100px);
+  /* height: calc(100% - 150px); */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 65px;
+  scroll-margin-top: 100px;
 }
 
 .skills-context {
@@ -389,10 +466,38 @@ main {
 
 .bubble-text {
   flex: 1;
+  width: 400px;
+  height: 400px;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
   position: relative;
 }
 
-.bubble {
+.bubble-text::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/components/skills/skills-bg-hover.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-in-out;
+}
+
+.bubble-text:hover::before {
+  background-image: url("../assets/components/skills/skills-bg-default.png");
+  background-size: contain;
+}
+
+/* .bubble {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -406,13 +511,13 @@ main {
 
 .bubble:hover img {
   content: url("../assets/components/skills/skills-bg-default.png");
-}
+} */
 
 .skill-text {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   z-index: 10;
   display: flex;
   justify-content: center;
@@ -431,7 +536,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
   /* width: 100%; */
   height: auto;
 }
@@ -458,6 +563,100 @@ main {
   font-weight: 400;
 }
 
+/* PROJECTS */
+
+.projects {
+  width: 1440px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.projects-container {
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 65px;
+  scroll-margin-top: 100px;
+}
+
+.projects-context {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: rgba(137, 188, 217, 0.07);
+}
+
+.project-names {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.project-name-tab {
+  color: var(--text-blue-color);
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.project-visit {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.project-tech {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-poster {
+  width: 450px;
+  height: 300px;
+}
+
+.project-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
 /* REFERENCE */
 
 .references {
@@ -470,12 +669,13 @@ main {
 
 .reference-container {
   width: 1200px;
-  height: calc(100% - 100px);
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 65px;
+  scroll-margin-top: 100px;
 }
 
 .reference-title {
@@ -500,16 +700,27 @@ main {
   justify-content: center;
   gap: 8px;
   align-items: center;
-  background-image: url("/assets/components/reference/bubble-bg-default.png");
+  position: relative;
+  cursor: pointer;
+}
+
+.bubble-content::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: url("../assets/components/reference/bubble-bg-default.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
 }
 
-.bubble-content:hover {
-  background-image: url("/assets/components/reference/bubble-bg-hover.png");
+.bubble-content:hover::before {
+  background-image: url("../assets/components/reference/bubble-bg-hover.png");
+  background-size: contain;
 }
 
 .ref-name {
@@ -530,6 +741,7 @@ main {
   font-size: 18px;
   font-weight: 400;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .ref-comment {
@@ -539,6 +751,243 @@ main {
   text-align: center;
   max-width: 290px;
   margin-bottom: 48px;
+}
+
+.ref-comment-link {
+  color: var(--text-blue-color);
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+.ref-comment-link:hover {
+  color: var(--secondary-text-color-light); /* funktioniert nicht !!*/
+}
+
+/* CONTACT SECTION */
+
+.contact {
+  width: 1440px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-me-container {
+  width: 1200px;
+  height: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 65px;
+  scroll-margin-top: 100px;
+  padding: 0 120px;
+  margin-bottom: 160px;
+}
+
+.contact-me-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.contact-text {
+  flex: 1;
+  color: var(--secondary-text-color-light);
+  font-size: 18px;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 120%;
+}
+
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  color: var(--secondary-text-color-light);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.contact-info span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-info .contact-email:hover {
+  color: var(--text-blue-color);
+  opacity: 0.8;
+}
+
+.contact-info .contact-email:hover img {
+  content: url("../assets/components/contact/🦆\ icon\ _email_hover.svg");
+}
+
+/* .contact-info .contact-email.contact-email:active {
+  color: var(--text-blue-color);
+}
+
+.contact-info .contact-email:active img {
+  content: url("../assets/components/contact/🦆\ icon\ _email_clicked.svg.svg");
+} */
+
+.contact-info .contact-phone:hover {
+  color: var(--text-blue-color);
+  opacity: 0.8;
+}
+
+.contact-info .contact-phone:hover img {
+  content: url("../assets/components/contact/🦆\ icon\ _phone_hover.svg");
+}
+
+.contact-me-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.inputs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* gap: 8px; */
+}
+
+.inputs label {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-blue-color);
+  margin-left: 20px;
+}
+
+.inputs input {
+  border: 1px solid var(--text-blue-color);
+  height: 60px;
+  border-radius: 30px;
+  width: 100%;
+  background-color: transparent;
+  padding: 20px;
+}
+
+.inputs input:focus-within {
+  background-color: var(--shape-bg-hover);
+  outline: none;
+  color: var(--secondary-text-color-light);
+  font-family: "josefin sans";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.message-container input {
+  height: 145px;
+  padding: 20px;
+  border: 1px solid var(--text-blue-color);
+  background-color: transparent;
+}
+
+.message-container input:focus-within {
+  background-color: var(--shape-bg-hover);
+  outline: none;
+  color: var(--secondary-text-color-light);
+  font-family: "josefin sans";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* .message-container input:focus {
+  background-color: var(--shape-bg-hover);
+  border: 1px solid var(--text-blue-color);
+} */
+
+.privacy-policy {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.privacy-msg-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.privacy-policy input[type="checkbox"] {
+  display: none;
+}
+
+.privacy-policy input[type="checkbox"]:checked + .privacy-policy-text::before {
+  background-image: url("../assets/components/contact/checkbox-checked.svg");
+}
+
+.privacy-policy input[type="checkbox"]:hover + .privacy-policy-text::before {
+  background-image: url("../assets/components/contact/checkbox-hover.svg");
+}
+
+.privacy-policy-text {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--secondary-text-color-light);
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.privacy-policy-text::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(-2deg);
+  width: 24px;
+  height: 24px;
+  content: "";
+  background-image: url("../assets/components/contact/checkbox-default.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.privacy-policy-text a {
+  text-decoration: none;
+  color: var(--text-blue-color);
+}
+
+.error-msg {
+  visibility: hidden;
+  color: var(--error-color);
 }
 
 /* FOOTER */
@@ -574,6 +1023,15 @@ footer {
   opacity: 0.8;
   font-size: 18px;
   font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+.legal-notice a:hover {
+  color: var(--btn-diactive-color);
+}
+
+.legal-notice a:active {
+  color: var(--secondary-text-color-light);
 }
 
 .legal-notice span {
@@ -608,7 +1066,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 16px;
 }
 
 .footer-social-media a {
@@ -617,16 +1075,16 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 
-.footer-social-media a:hover img:nth-of-type(1) {
-  content: url("../assets/components/footer/git-dark-hover.png");
+.footer-social-media img:hover#footer-git {
+  content: url("../assets/components/footer/git-hover-white.svg");
 }
 
-.footer-social-media a:hover img:nth-of-type(2) {
-  content: url("../assets/components/footer/email-dark-hover.png");
+.footer-social-media img:hover#footer-email {
+  content: url("../assets/components/footer/email-hover-white.svg");
 }
 
-.footer-social-media a:hover img:nth-of-type(3) {
-  content: url("../assets/components/footer/linkedIn-dark-hover.png");
+.footer-social-media img:hover#footer-linkedIn {
+  content: url("../assets/components/footer/linkedIn-hover-white.svg");
 }
 
 .footer-social-media a img {

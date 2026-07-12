@@ -5,6 +5,8 @@
   --text-color-inactive: rgba(38, 46, 52, 0.12);
   --secondary-text-color-light: rgba(248, 245, 236, 1);
   --text-blue-color: rgba(137, 188, 217, 1);
+  --shape-bg-hover: rgb(48, 63, 72);
+  --btn-diactive-color: rgba(248, 245, 236, 0.5);
 
   --primary-color-v1: rgba(249, 203, 113, 1);
   --primary-color-v2: rgba(137, 188, 217, 1);
@@ -22,4 +24,30 @@
   --hero-button-font-size: 1.25rem;
   --hero-button-weight: 700;
   --hero-button-line-height: 120%;
+}
+
+.btn-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-blue-color);
+  background-color: var(--primary-color-background);
+  border: 1px solid var(--text-blue-color);
+  padding: 14px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Josefin Sans";
+}
+
+.btn-primary:hover {
+  background-color: var(--button-hover-background);
+}
+
+.btn-primary:disabled {
+  background-color: var(--btn-diactive-color);
+  color: var(--btn-diactive-color);
+  cursor: not-allowed;
 }

@@ -12,17 +12,17 @@
       <section class="hero" id="hero-section">
         <div class="hero-main-container">
           <div class="hero-profile-container">
-            <img
+            <!-- <img
               src="assets/components/hero-section/photo-bg-default.png"
               alt=""
-            />
+            /> -->
             <img src="assets/img/dev-photo.png" alt="" />
           </div>
           <div class="hero-content-container">
             <div class="logo-content">
               <img
                 class="hero-logo"
-                src="assets/components/hero-section/icons/Logo-.png"
+                src="assets/components/hero-section/icons/Logo-hero.svg"
                 alt="Logo"
               />
               <span class="dev-name anta">N.Shirvani</span>
@@ -35,27 +35,27 @@
             <a href="#why-me" class="arrow-down">
               <img
                 id="arrow-down"
-                src="assets/components/hero-section/icons/arrow-down-default.png"
+                src="assets/components/hero-section/icons/arrow-down-default.svg"
                 alt="arrow-down"
               />
             </a>
             <div class="hero-social-media-container">
-              <a href=""
+              <a href="#"
                 ><img
                   id="email"
-                  src="assets/components/hero-section/icons/Email-default.png"
+                  src="assets/components/hero-section/icons/email-default.svg"
                   alt="E-Mail"
               /></a>
-              <a href=""
+              <a href="#"
                 ><img
                   id="github"
-                  src="assets/components/hero-section/icons/Git-default.png"
+                  src="assets/components/hero-section/icons/git-default.svg"
                   alt="GitHub"
               /></a>
-              <a href=""
+              <a href="#"
                 ><img
                   id="linkedin"
-                  src="assets/components/hero-section/icons/LinkedIn-default.png"
+                  src="assets/components/hero-section/icons/linkedIn-default.svg"
                   alt="LinkedIn"
               /></a>
             </div>
@@ -68,7 +68,7 @@
         <div class="header-container">
           <div class="header-logo">
             <img
-              src="assets/components/header/header-logo.png"
+              src="assets/components/header/Logo-header-footer.svg"
               alt=""
               class="header-logo"
             />
@@ -77,21 +77,31 @@
           </div>
           <div class="header-menu">
             <nav>
-              <a class="header-link josefin-sans" href="#why-me">Why Me</a>
-              <a class="header-link josefin-sans" href="#skills">Skills</a>
-              <a class="header-link josefin-sans" href="#projects">Projects</a>
-              <a class="header-link josefin-sans" href="#contact">Contact</a>
+              <ul>
+                <li class="header-link josefin-sans" id="why-me">Why Me</li>
+                <li class="header-link josefin-sans" id="skills">Skills</li>
+                <li class="header-link josefin-sans" id="projects">Projects</li>
+                <li class="header-link josefin-sans" id="contact">Contact</li>
+              </ul>
             </nav>
           </div>
-          <div class="header-language">
+          <div class="lang-switcher" id="lang-switcher">
+            <a href="" class="header-language-text josefin-sans" data-id="de"
+              >DE</a
+            >
+            <a href="" class="header-language-text josefin-sans" data-id="en"
+              >EN</a
+            >
+          </div>
+          <!-- <div class="header-language">
             <span class="header-language-text josefin-sans">DE</span>
             <span class="header-language-text josefin-sans">EN</span>
-          </div>
+          </div> -->
         </div>
       </section>
 
       <!-- ABOUT ME -->
-      <section class="about-me" id="why-me">
+      <section class="about-me" data-id="why-me">
         <div class="about-me-container">
           <h2 class="section-title anta">why Me</h2>
           <div class="about-me-context">
@@ -122,63 +132,65 @@
                 In the end, great software isn't just built. It's crafted—one
                 line of code at a time.
               </p>
-              <button class="about-me-button josefin-sans">Let’s talk</button>
+              <button class="about-me-button josefin-sans btn-primary">
+                Let’s talk
+              </button>
             </div>
           </div>
         </div>
       </section>
 
       <!-- SKILLS SECTION -->
-      <section class="skills" id="skills">
+      <section class="skills" data-id="skills">
         <div class="skills-container">
           <h2 class="section-title anta">my skills</h2>
           <div class="skills-context">
             <div class="skills-icons">
               <img
-                src="assets/components/skills/Property 1=CSS.png"
+                src="assets/components/skills/Property 1=CSS.svg"
                 alt="CSS"
               />
               <img
-                src="assets/components/skills/Property 1=Firebase.png"
+                src="assets/components/skills/Property 1=Firebase.svg"
                 alt="firebase"
               />
               <img
-                src="assets/components/skills/Property 1=GIT.png"
+                src="assets/components/skills/Property 1=GIT.svg"
                 alt="GIT"
               />
               <img
-                src="assets/components/skills/Property 1=HTML.png"
+                src="assets/components/skills/Property 1=HTML.svg"
                 alt="HTML"
               />
               <img
-                src="assets/components/skills/Property 1=JavaScript.png"
+                src="assets/components/skills/Property 1=JavaScript.svg"
                 alt="JS"
               />
               <img
-                src="assets/components/skills/Property 1=Rest-Api.png"
+                src="assets/components/skills/Property 1=Rest-Api.svg"
                 alt="rest-API"
               />
               <img
-                src="assets/components/skills/Property 1=Scrum.png"
+                src="assets/components/skills/Property 1=Scrum.svg"
                 alt="Scrum"
               />
             </div>
             <div class="bubble-text">
-              <div class="bubble">
+              <!-- <div class="bubble">
                 <img
                   src="assets/components/skills/skills-bg-hover.png"
                   alt=""
                 />
-              </div>
+              </div> -->
               <div class="skill-text">
                 <p class="josefin-sans">i am currently learning</p>
                 <div class="in-progress-container">
                   <div class="in-progeress-skills">
-                    <img src="assets/components/skills/Angular.png" alt="" />
+                    <img src="assets/components/skills/Angular.svg" alt="" />
                     <h4 class="text-explanation josefin-sans">Angular</h4>
                   </div>
                   <div class="in-progeress-skills">
-                    <img src="assets/components/skills/typeScript.png" alt="" />
+                    <img src="assets/components/skills/TypeScript.svg" alt="" />
                     <h4 class="text-explanation josefin-sans">TypeScript</h4>
                   </div>
                 </div>
@@ -189,10 +201,76 @@
       </section>
 
       <!-- PROJECTS SECTION -->
-      <section class="projects" id="projects"></section>
+      <section class="projects" data-id="projects">
+        <div class="projects-container">
+          <h2 class="section-title anta">My Projects</h2>
+          <div class="projects-context josefin-sans">
+            <div class="project-names">
+              <a class="project-name-tab" href="#">1. El Pollo Loco</a>
+              <a class="project-name-tab" href="#">2. Join</a>
+              <a class="project-name-tab" href="#">3. Pokedex</a>
+            </div>
+            <div class="project-info">
+              <div class="project-text">
+                <div class="about-project">
+                  <h3 class="project-title">About the project</h3>
+                  <h4>Duration: 3 weeks</h4>
+                  <p class="project-explanation">
+                    This App is a Slack Clone App. It revolutionizes team
+                    communication and collaboration with its intuitive
+                    interface, real-time messaging, and robust channel
+                    organization.
+                  </p>
+                </div>
+                <div class="about-project">
+                  <h3 class="project-title">
+                    How I have organised my work process
+                  </h3>
+                  <p class="project-explanation">
+                    How do you keep your code clean and maintainable? Have you
+                    broken the project down into reusable modules or components?
+                    Focus on documentation, naming files, variables, classes and
+                    testing.
+                  </p>
+                </div>
+                <div class="about-project">
+                  <h3 class="project-title">My group work experience</h3>
+                  <p class="project-explanation">
+                    How many people were in the team and what was your role?
+                    Describe your tasks in 1-2 sentences, for example: login
+                    form, dashboard or chat functionality. What technologies did
+                    you use? It is nice to mention good teamwork and
+                    cooperation.
+                  </p>
+                </div>
+              </div>
+              <div class="project-visit">
+                <div class="project-tech">
+                  <h4 class="tech">Technologies</h4>
+                  <div class="tech-icon">
+                    <img src="assets/components/projects/HTML.svg" alt="" />
+                    <img src="assets/components/projects/CSS.svg" alt="" />
+                    <img
+                      src="assets/components/projects/Javascript.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="project-poster">
+                  <img src="assets/img/El-Pollo-loco.png" alt="El-Pollo-Loco" />
+                </div>
+                <div class="project-btns">
+                  <button class="btn-primary">Live Test</button>
+                  <button class="btn-primary">GitHub</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- REFERENCE SECTION -->
-      <section class="references" id="references">
+      <section class="references" data-id="references">
         <div class="reference-container">
           <h2 class="reference-title josefin-sans">
             Need a teamplayer? Here’s what my colleagues say about me
@@ -208,7 +286,7 @@
                 collaboration with the team members. She is a reliable and
                 friendly person.’’
               </p>
-              <a href="#" class="ref-link">Linked In Profile</a>
+              <a href="#" class="ref-comment-link">Linked In Profile</a>
             </div>
 
             <div class="bubble-content josefin-sans">
@@ -221,7 +299,7 @@
                 structured way and write a clear code. I recommend her as a
                 colleague.’’
               </p>
-              <a href="#" class="ref-link">Linked In Profile</a>
+              <a href="#" class="ref-comment-link">Linked In Profile</a>
             </div>
 
             <div class="bubble-content josefin-sans">
@@ -233,14 +311,75 @@
                 ‘’ She is a trustworthy teamplayer and can cope with the stress
                 of deadlines. Structured work and clear code. ‘’
               </p>
-              <a href="#" class="ref-link">Linked In Profile</a>
+              <a href="#" class="ref-comment-link">Linked In Profile</a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- CONTACT SECTION -->
-      <section class="contact" id="contact"></section>
+      <section class="contact" data-id="contact">
+        <div class="contact-me-container">
+          <h1 class="section-title anta">Contact me</h1>
+          <div class="contact-me-text-container josefin-sans">
+            <div class="contact-text">
+              Encourage people to contact you and describe what role you are
+              interested in. Show that you will add value to their projects
+              through your work. Example: Feel free to get in touch with job
+              offers or opportunities such as: ...
+            </div>
+            <div class="contact-info">
+              <span class="contact-email">
+                <img
+                  id="contact-email"
+                  src="assets/components/contact/🦆 icon _email_.svg"
+                  alt=""
+                />
+                E-mail: fohrer.developer@gmail.com
+              </span>
+              <span class="contact-phone">
+                <img
+                  id="contact-phone"
+                  src="assets/components/contact/🦆 icon _phone_.svg"
+                  alt=""
+                />
+                Tel: 0157 123 456 68
+              </span>
+            </div>
+          </div>
+          <form action="post" class="contact-me-form josefin-sans">
+            <div class="contact-container">
+              <div class="inputs">
+                <label for="">Your name</label>
+                <input type="text" />
+              </div>
+              <div class="inputs">
+                <label for="">Your Email</label>
+                <input type="text" />
+              </div>
+            </div>
+
+            <div class="message-container">
+              <div class="inputs">
+                <label for="">Your Message</label>
+                <input type="text" />
+              </div>
+            </div>
+            <div class="privacy-policy">
+              <div class="privacy-msg-box">
+                <input type="checkbox" id="privacy" name="privacy" />
+                <label for="privacy" class="privacy-policy-text">
+                  I've read the <a href="#">privacy policy </a> and agree to the
+                  processing of my data as outlined.
+                </label>
+                <div class="error-msg">Please accept the privacy policy.</div>
+              </div>
+
+              <button type="submit" class="send btn-primary">Send</button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->
@@ -254,7 +393,7 @@
         </div>
         <div class="footer-logo">
           <img
-            src="assets/components/header/header-logo.png"
+            src="assets/components/header/Logo-header-footer.svg"
             alt=""
             class="footer-logo"
           />
@@ -263,14 +402,21 @@
         </div>
         <div class="footer-social-media">
           <a href="#"
-            ><img src="assets/components/footer/git-dark-default.png" alt=""
-          /></a>
-          <a href="#"
-            ><img src="assets/components/footer/email-dark-default.png" alt=""
+            ><img
+              src="assets/components/footer/git-dark-default.svg"
+              id="footer-git"
+              alt=""
           /></a>
           <a href="#"
             ><img
-              src="assets/components/footer/linkedIn-dark-default.png"
+              src="assets/components/footer/email-dark-default.svg"
+              id="footer-email"
+              alt=""
+          /></a>
+          <a href="#"
+            ><img
+              src="assets/components/footer/linkedIn-dark-default.svg"
+              id="footer-linkedIn"
               alt=""
           /></a>
         </div>
@@ -279,5 +425,6 @@
 
     <!-- JS -->
     <script src="/scripts/script.js"></script>
+    <script src="/scripts/typingEffect.js"></script>
   </body>
 </html>

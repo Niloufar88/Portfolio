@@ -1,86 +1,72 @@
-const iconEl = document.querySelector(".about-me-icon");
-const firstPartText = document.querySelector(".fp");
-const secondPartText = document.querySelector(".sp");
-const thirdPartText = document.querySelector(".tp");
-const animationContainer = document.querySelector(".about-me-animation");
+const languageEl = document.querySelectorAll(".header-language-text");
+const heroSection = document.getElementById("hero-section");
+const header = document.querySelector(".header");
 
-const textItems = [
-  {
-    icon: "assets/components/why me/location-icon.png",
-    fpText: "I am",
-    spText: " located in Tehran",
-    tpText: "... |",
-  },
-  {
-    icon: "assets/components/why me/relocation-icon.png",
-    fpText: "I am",
-    spText: " open for relocation",
-    tpText: "... |",
-  },
-  {
-    icon: "assets/components/why me/remore-icon.png",
-    fpText: "I am",
-    spText: " open to work remote",
-    tpText: "... |",
-  },
-];
+// const arrowDownBtn = document.querySelector(".arrow-down");
+// const targetSection = document.getElementById("why-me");
 
-let itemIndex = 0;
-let letterIndex = 0;
-let isDeleting = false;
+// arrowDownBtn.addEventListener("click", () => {
+//   // 1. Get the current scroll position
+//   const currentScroll = window.scrollY;
 
-const typeSpeed = 120;
-const deleteSpeed = 80;
-const holdTime = 1000;
-const gapAfterHide = 300;
+//   // 2. Get the distance from the top of the screen to the section
+//   const sectionTopRelative = targetSection.getBoundingClientRect().top;
 
-function letterAppearance() {
-  const { current, fullText } = textPartEl();
-  animationContainer.classList.remove("hidden");
-  iconEl.src = current.icon;
-  if (!isDeleting) {
-    letterIndex++;
-    fullTextRenderin(letterIndex);
-    if (letterIndex === fullText.length) {
-      isDeleting = true;
-      setTimeout(letterAppearance, holdTime);
-      return;
-    }
-    textSetTimeout(typeSpeed);
+//   // 3. Add them together to get the absolute position from the very top of the page
+//   const absoluteTargetPosition = currentScroll + sectionTopRelative;
+
+//   // 4. Run your spring animation function
+//   springScroll(absoluteTargetPosition);
+// });
+
+function eclipseBgActive() {
+  languageEl.forEach((langBtn) => {
+    langBtn.classList.add("active");
+  });
+}
+
+// fixing header postion when hero section is scrolled down completely
+window.addEventListener("scroll", function () {
+  const scrollHeight = window.pageYOffset;
+  console.log(`scrollHeight:`, window.pageYOffset);
+  const heroSectionHeight = heroSection.getBoundingClientRect().height;
+
+  if (scrollHeight > heroSectionHeight) {
+    header.classList.add("fixed");
   } else {
-    letterIndex--;
-    fullTextRenderin(letterIndex);
-    if (letterIndex === 0) {
-      isDeleting = false;
-      itemIndex = (itemIndex + 1) % textItems.length;
-      animationContainer.classList.add("hidden");
-      setTimeout(letterAppearance, gapAfterHide);
-      return;
-    }
-    textSetTimeout(deleteSpeed);
+    header.classList.remove("fixed");
   }
-}
+});
 
-function textPartEl() {
-  const current = textItems[itemIndex];
-  const fullText = current.fpText + " " + current.spText + " " + current.tpText;
-  return { current, fullText };
-}
+// function springScroll(endPosition) {
+//   const mass = 1;
+//   const stiffness = 100;
+//   const damping = 15;
 
-function fullTextRenderin(letterIndex) {
-  const { current, fullText } = textPartEl();
-  const typedPart = fullText.slice(0, letterIndex);
-  firstPartText.textContent = typedPart.slice(0, current.fpText.length);
-  const spStart = current.fpText.length;
-  const spEnd = spStart + 1 + current.spText.length;
-  secondPartText.textContent = typedPart.slice(spStart, spEnd);
-  const tpStart = spEnd;
-  thirdPartText.textContent = typedPart.slice(tpStart);
-}
+//   let speed = 0;
 
-function textSetTimeout(speed) {
-  setTimeout(letterAppearance, speed);
-  return;
-}
+//   function schritt() {
+//     const distance = endPosition - window.scrollY;
 
-letterAppearance();
+//     // If we are close enough, snap to target and stop
+//     if (Math.abs(distance) < 0.5 && Math.abs(speed) < 0.5) {
+//       window.scrollTo(0, endPosition);
+//       return;
+//     }
+
+//     // 1. Calculate physics forces
+//     const kraft = distance * stiffness;
+//     const bremsen = speed * damping;
+
+//     // 2. Update speed (multiplied by 0.016 to slow it down per frame)
+//     speed = speed + ((kraft - bremsen) / mass) * 0.016;
+
+//     // 3. Update position (multiplied by 0.016 for smooth rendering)
+//     const neuePosition = window.scrollY + speed * 0.016;
+//     window.scrollTo(0, neuePosition);
+
+//     requestAnimationFrame(schritt);
+//   }
+
+//   requestAnimationFrame(schritt);
+// }
