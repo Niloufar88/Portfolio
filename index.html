@@ -351,22 +351,31 @@
               </span>
             </div>
           </div>
-          <form action="post" class="contact-me-form josefin-sans">
+          <form
+            action="senden.php"
+            method="post"
+            class="contact-me-form josefin-sans"
+          >
             <div class="contact-container">
               <div class="inputs">
-                <label for="">Your name</label>
-                <input type="text" />
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="absender_name" required />
               </div>
               <div class="inputs">
-                <label for="">Your Email</label>
-                <input type="text" />
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="absender_email" required />
               </div>
             </div>
 
             <div class="message-container">
               <div class="inputs">
-                <label for="">Your Message</label>
-                <input type="text" />
+                <label for="message">Your Message</label>
+                <input
+                  type="text"
+                  id="message"
+                  name="absender_message"
+                  required
+                />
               </div>
             </div>
             <div class="privacy-policy">
