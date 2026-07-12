@@ -287,6 +287,26 @@ main {
   cursor: pointer;
   color: var(--primary-color-text-dark);
   transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.header-menu nav ul .header-link.active {
+  color: var(--secondary-text-color-light);
+}
+
+.header-menu nav ul .header-link.active::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-2deg);
+  width: 150%;
+  height: 170%;
+  content: "";
+  background-image: url("../assets/components/header/ecliipse-header-menu.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .header-menu nav .header-link:hover {
@@ -320,15 +340,19 @@ main {
   position: absolute;
   top: -4px;
   left: -6px;
-  width: 147%;
+  width: 140%;
   height: 110%;
   content: "";
-  background-image: url("../assets/components/header/lang-active-bg.png");
+  background-image: url("../assets/components/header/eliipse-lang-active.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   transform: rotate(-2deg);
 }
 
-.lang-switcher .header-language-text.active {
+.lang-switcher a.active {
   color: var(--secondary-text-color-light);
+  pointer-events: none;
 }
 
 /* ABOUT ME SECTION */
@@ -382,6 +406,7 @@ main {
   font-size: 18px;
   font-weight: 400;
   text-align: left;
+  margin-bottom: 24px;
 }
 
 /* .about-me-button {
