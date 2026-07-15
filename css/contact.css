@@ -1,0 +1,229 @@
+/* CONTACT SECTION */
+
+.contact {
+  width: 1440px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact.hide {
+  display: none;
+}
+
+.contact-me-container {
+  width: 1200px;
+  height: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 65px;
+  scroll-margin-top: 100px;
+  padding: 0 120px;
+  margin-bottom: 160px;
+}
+
+.contact-me-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.contact-text {
+  flex: 1;
+  color: var(--secondary-text-color-light);
+  font-size: 18px;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 120%;
+}
+
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  color: var(--secondary-text-color-light);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.contact-info span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-info .contact-email:hover {
+  color: var(--text-blue-color);
+  opacity: 0.8;
+}
+
+.contact-info .contact-email:hover img {
+  content: url("../assets/components/contact/🦆\ icon\ _email_hover.svg");
+}
+
+/* .contact-info .contact-email.contact-email:active {
+  color: var(--text-blue-color);
+}
+
+.contact-info .contact-email:active img {
+  content: url("../assets/components/contact/🦆\ icon\ _email_clicked.svg.svg");
+} */
+
+.contact-info .contact-phone:hover {
+  color: var(--text-blue-color);
+  opacity: 0.8;
+}
+
+.contact-info .contact-phone:hover img {
+  content: url("../assets/components/contact/🦆\ icon\ _phone_hover.svg");
+}
+
+.contact-me-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.inputs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* gap: 8px; */
+}
+
+.inputs label {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-blue-color);
+  margin-left: 20px;
+}
+
+.inputs input {
+  border: 1px solid var(--text-blue-color);
+  height: 60px;
+  border-radius: 30px;
+  width: 100%;
+  background-color: transparent;
+  padding: 20px;
+}
+
+.inputs input:focus-within {
+  background-color: var(--shape-bg-hover);
+  outline: none;
+  color: var(--secondary-text-color-light);
+  font-family: "josefin sans";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.message-container input {
+  height: 145px;
+  padding: 20px;
+  border: 1px solid var(--text-blue-color);
+  background-color: transparent;
+}
+
+.message-container input:focus-within {
+  background-color: var(--shape-bg-hover);
+  outline: none;
+  color: var(--secondary-text-color-light);
+  font-family: "josefin sans";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* .message-container input:focus {
+  background-color: var(--shape-bg-hover);
+  border: 1px solid var(--text-blue-color);
+} */
+
+.privacy-policy {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.privacy-msg-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.privacy-policy input[type="checkbox"] {
+  display: none;
+}
+
+.privacy-policy input[type="checkbox"]:checked + .privacy-policy-text::before {
+  background-image: url("../assets/components/contact/checkbox-checked.svg");
+}
+
+.privacy-policy input[type="checkbox"]:hover + .privacy-policy-text::before {
+  background-image: url("../assets/components/contact/checkbox-hover.svg");
+}
+
+.privacy-policy-text {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--secondary-text-color-light);
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.privacy-policy-text::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(-2deg);
+  width: 24px;
+  height: 24px;
+  content: "";
+  background-image: url("../assets/components/contact/checkbox-default.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.privacy-policy-text a {
+  text-decoration: none;
+  color: var(--text-blue-color);
+}
+
+.error-msg {
+  visibility: hidden;
+  color: var(--error-color);
+}

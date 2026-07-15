@@ -1,4 +1,11 @@
 @import url(fonts.css);
 @import url(config.css);
 @import url(standard.css);
-@import url(xxl.css) screen;
+@import url(hero.css);
+@import url(header.css);
+@import url(about-me.css);
+@import url(skills.css);
+@import url(project.css);
+@import url(contact.css);
+@import url(legal-notice.css);
+@import url(footer.css);

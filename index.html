@@ -119,7 +119,7 @@
       </section>
 
       <!-- ABOUT ME -->
-      <section class="about-me" data-id="why-me">
+      <section class="about-me animate-on-scroll" data-id="why-me">
         <div class="about-me-container">
           <h2 class="section-title anta" data-i18n="firstSectionTitle">
             why Me
@@ -145,9 +145,9 @@
       </section>
 
       <!-- SKILLS SECTION -->
-      <section class="skills" data-id="skills">
+      <section class="skills animate-on-scroll" data-id="skills">
         <div class="skills-container">
-          <h2 class="section-title anta">my skills</h2>
+          <h2 class="section-title anta" data-i18n="secondSectionTitle"></h2>
           <div class="skills-context">
             <div class="skills-icons">
               <img
@@ -205,52 +205,45 @@
       </section>
 
       <!-- PROJECTS SECTION -->
-      <section class="projects" data-id="projects">
+      <section class="projects animate-on-scroll" data-id="projects">
         <div class="projects-container">
-          <h2 class="section-title anta">My Projects</h2>
+          <h2 class="section-title anta" data-i18n="thirdSectionTitle"></h2>
           <div class="projects-context josefin-sans">
             <div class="project-names">
-              <a class="project-name-tab" href="#">1. El Pollo Loco</a>
-              <a class="project-name-tab" href="#">2. Join</a>
-              <a class="project-name-tab" href="#">3. Pokedex</a>
+              <a class="project-name-tab active" href="#">1. El Pollo Loco</a>
+              <a class="project-name-tab" href="">2. Join</a>
+              <a class="project-name-tab" href="">3. Pokedex</a>
             </div>
             <div class="project-info">
               <div class="project-text">
                 <div class="about-project">
-                  <h3 class="project-title">About the project</h3>
-                  <h4>Duration: 3 weeks</h4>
-                  <p class="project-explanation">
-                    This App is a Slack Clone App. It revolutionizes team
-                    communication and collaboration with its intuitive
-                    interface, real-time messaging, and robust channel
-                    organization.
-                  </p>
+                  <div class="titles">
+                    <h3
+                      class="project-title"
+                      data-i18n="aboutProjectTitle"
+                    ></h3>
+                    <h4 data-i18n="duration1"></h4>
+                  </div>
+                  <p
+                    class="project-explanation"
+                    data-i18n="aboutProjectExplanation1"
+                  ></p>
                 </div>
                 <div class="about-project">
-                  <h3 class="project-title">
-                    How I have organised my work process
-                  </h3>
-                  <p class="project-explanation">
-                    How do you keep your code clean and maintainable? Have you
-                    broken the project down into reusable modules or components?
-                    Focus on documentation, naming files, variables, classes and
-                    testing.
-                  </p>
+                  <h3 class="project-title" data-i18n="organaiseTitle"></h3>
+                  <p class="project-explanation" data-i18n="organiseText1"></p>
                 </div>
                 <div class="about-project">
-                  <h3 class="project-title">My group work experience</h3>
-                  <p class="project-explanation">
-                    How many people were in the team and what was your role?
-                    Describe your tasks in 1-2 sentences, for example: login
-                    form, dashboard or chat functionality. What technologies did
-                    you use? It is nice to mention good teamwork and
-                    cooperation.
-                  </p>
+                  <h3 class="project-title" data-i18n="soloProjectLearn"></h3>
+                  <p
+                    class="project-explanation"
+                    data-i18n="learnExplanation"
+                  ></p>
                 </div>
               </div>
               <div class="project-visit">
                 <div class="project-tech">
-                  <h4 class="tech">Technologies</h4>
+                  <h4 class="tech" data-i18n="tech"></h4>
                   <div class="tech-icon">
                     <img src="assets/components/projects/HTML.svg" alt="" />
                     <img src="assets/components/projects/CSS.svg" alt="" />
@@ -264,8 +257,21 @@
                   <img src="assets/img/El-Pollo-loco.png" alt="El-Pollo-Loco" />
                 </div>
                 <div class="project-btns">
-                  <button class="btn-primary">Live Test</button>
-                  <button class="btn-primary">GitHub</button>
+                  <button
+                    class="btn-primary blue"
+                    id="liveTestBtn"
+                    data-i18n="liveTestBtn"
+                    onclick="navigateToServer()"
+                  >
+                    Live Test
+                  </button>
+                  <button
+                    class="btn-primary"
+                    id="gitHubBtn"
+                    onclick="navigateToGithub()"
+                  >
+                    GitHub
+                  </button>
                 </div>
               </div>
             </div>
@@ -274,64 +280,61 @@
       </section>
 
       <!-- REFERENCE SECTION -->
-      <section class="references" data-id="references">
+      <section class="references animate-on-scroll" data-id="references">
         <div class="reference-container">
-          <h2 class="reference-title josefin-sans">
-            Need a teamplayer? Here’s what my colleagues say about me
-          </h2>
+          <h2
+            class="reference-title josefin-sans"
+            data-i18n="forthSectionTitle"
+          ></h2>
           <div class="bubble-boxes">
             <div class="bubble-content josefin-sans">
               <h3 class="ref-name">Sahra Mueller</h3>
-              <h4 class="ref-project">
-                Project <a href="#" class="ref-link">DA Bublle</a>
+              <h4 class="ref-project" data-i18n="refProject">
+                <a href="#" class="ref-link">El Pollo Loco</a>
               </h4>
-              <p class="ref-comment">
-                ‘’Claudia had to develop, format and deliver content in
-                collaboration with the team members. She is a reliable and
-                friendly person.’’
-              </p>
-              <a href="#" class="ref-comment-link">Linked In Profile</a>
+              <p class="ref-comment" data-i18n="refComment1"></p>
+              <a
+                href="#"
+                class="ref-comment-link"
+                data-i18n="refCommenetLink"
+              ></a>
             </div>
 
             <div class="bubble-content josefin-sans">
               <h3 class="ref-name">James Rugman</h3>
-              <h4 class="ref-project">
-                Project <a href="#" class="ref-link">Join</a>
+              <h4 class="ref-project" data-i18n="refProject">
+                <a href="#" class="ref-link">Join</a>
               </h4>
-              <p class="ref-comment">
-                ‘’Claudia is a reliable and friendly person. Works in a
-                structured way and write a clear code. I recommend her as a
-                colleague.’’
-              </p>
-              <a href="#" class="ref-comment-link">Linked In Profile</a>
+              <p class="ref-comment" data-i18n="refComment2"></p>
+              <a
+                href="#"
+                class="ref-comment-link"
+                data-i18n="refCommenetLink"
+              ></a>
             </div>
 
             <div class="bubble-content josefin-sans">
               <h3 class="ref-name">Evelyn Marx</h3>
-              <h4 class="ref-project">
-                Project <a href="#" class="ref-link">Sharkie</a>
+              <h4 class="ref-project" data-i18n="refProject">
+                <a href="#" class="ref-link">Pokedex</a>
               </h4>
-              <p class="ref-comment">
-                ‘’ She is a trustworthy teamplayer and can cope with the stress
-                of deadlines. Structured work and clear code. ‘’
-              </p>
-              <a href="#" class="ref-comment-link">Linked In Profile</a>
+              <p class="ref-comment" data-i18n="refComment3"></p>
+              <a
+                href="#"
+                class="ref-comment-link"
+                data-i18n="refCommenetLink"
+              ></a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- CONTACT SECTION -->
-      <section class="contact" data-id="contact">
+      <section class="contact animate-on-scroll" data-id="contact">
         <div class="contact-me-container">
-          <h1 class="section-title anta">Contact me</h1>
+          <h1 class="section-title anta" data-i18n="fifthSectionTitle"></h1>
           <div class="contact-me-text-container josefin-sans">
-            <div class="contact-text">
-              Encourage people to contact you and describe what role you are
-              interested in. Show that you will add value to their projects
-              through your work. Example: Feel free to get in touch with job
-              offers or opportunities such as: ...
-            </div>
+            <div class="contact-text" data-i18n="contactMeText"></div>
             <div class="contact-info">
               <span class="contact-email">
                 <img
@@ -339,7 +342,7 @@
                   src="assets/components/contact/🦆 icon _email_.svg"
                   alt=""
                 />
-                E-mail: fohrer.developer@gmail.com
+                E-mail: niloufar88@hotmail.com
               </span>
               <span class="contact-phone">
                 <img
@@ -352,24 +355,24 @@
             </div>
           </div>
           <form
-            action="senden.php"
+            action="https://formspree.io/f/xzdnplab"
             method="post"
             class="contact-me-form josefin-sans"
           >
             <div class="contact-container">
               <div class="inputs">
-                <label for="name">Your name</label>
+                <label for="name" data-i18n="formName"></label>
                 <input type="text" id="name" name="absender_name" required />
               </div>
               <div class="inputs">
-                <label for="email">Your Email</label>
+                <label for="email" data-i18n="formEmail"></label>
                 <input type="email" id="email" name="absender_email" required />
               </div>
             </div>
 
             <div class="message-container">
               <div class="inputs">
-                <label for="message">Your Message</label>
+                <label for="message" data-i18n="formMessage"></label>
                 <input
                   type="text"
                   id="message"
@@ -385,21 +388,49 @@
                   I've read the <a href="#">privacy policy </a> and agree to the
                   processing of my data as outlined.
                 </label>
-                <div class="error-msg">Please accept the privacy policy.</div>
+                <div class="error-msg" data-i18n="errorMsg">
+                  Please accept the privacy policy.
+                </div>
               </div>
 
-              <button type="submit" class="send btn-primary">Send</button>
+              <button
+                type="submit"
+                class="send btn-primary"
+                data-i18n="formBtn"
+              ></button>
             </div>
           </form>
+        </div>
+      </section>
+
+      <!-- LEGAL NOTICE -->
+      <section class="legal-notice-section hide" data-id="legal-notice">
+        <div class="legal-notice-container">
+          <h2 class="section-title anta" data-i18n="legalNoticeTitle">
+            Legal Notice
+          </h2>
+          <div class="legal-notice-context">
+            <p class="legal-text josefin-sans">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam,
+              labore aliquid eaque tempora iusto accusamus. Neque quos officia
+              quis animi ducimus quam unde nihil esse, in error ea voluptates
+              rem.
+            </p>
+          </div>
         </div>
       </section>
     </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="footer">
       <div class="footer-content-container">
         <div class="legal-notice">
-          <a href="#" class="footer-link josefin-sans">legal notice</a>
+          <a
+            href=""
+            class="footer-link josefin-sans"
+            onclick="openLegalNotice(event)"
+            >legal notice</a
+          >
           <span class="footer-copyright josefin-sans"
             >&copy; Niloufar Shirvani 2026</span
           >
@@ -414,7 +445,7 @@
           <span class="footer-dev-role josefin-sans">developer</span>
         </div>
         <div class="footer-social-media">
-          <a href="#"
+          <a href="https://github.com/Niloufar88"
             ><img
               src="assets/components/footer/git-dark-default.svg"
               id="footer-git"
@@ -437,8 +468,9 @@
     </footer>
 
     <!-- JS -->
-    <script src="/scripts/changingLanguage.js"></script>
-    <script src="/scripts/script.js"></script>
-    <script src="/scripts/typingEffect.js"></script>
+    <script src="scripts/changingLanguage.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/scroll.js"></script>
+    <script src="scripts/typingEffect.js"></script>
   </body>
 </html>

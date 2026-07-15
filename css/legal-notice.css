@@ -1,0 +1,34 @@
+.legal-notice-section {
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.legal-notice-container {
+  width: 1220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 65px;
+  scroll-margin-top: 100px;
+}
+
+.legal-notice-context {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: var(--primary-color-background);
+}
+
+.legal-text {
+  color: var(--secondary-text-color-light);
+  font-size: 16px;
+}
+
+.legal-notice-section.hide {
+  display: none;
+}

@@ -1,0 +1,303 @@
+/* PROJECTS */
+
+.projects {
+  width: 1440px;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.projects-container {
+  width: 1200px;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 65px;
+  scroll-margin-top: 100px;
+}
+
+/* .section-title.project-bg {
+  width: 100%;
+  text-align: center;
+  background-color: var(--primary-color-background);
+} */
+
+.projects-context {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 48px;
+  background-color: var(--secondary-color-background);
+  /* background-color: rgba(137, 188, 217, 0.07); */
+}
+
+.project-names {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  height: 80px;
+  background-color: var(--primary-color-background);
+  /* margin-bottom: 32px; */
+}
+
+.project-name-tab {
+  color: var(--text-blue-color);
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-name-tab:hover {
+  color: var(--secondary-text-color-light);
+}
+
+.project-name-tab.active {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  background-color: var(--secondary-color-background);
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  gap: 40px;
+  padding: 24px;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 36px;
+  color: var(--secondary-text-color-light);
+}
+
+.about-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.titles {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+
+.titles h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.project-title {
+  font-size: 28px;
+  line-height: 120%;
+  font-weight: 400;
+  position: relative;
+  padding-left: 50px;
+}
+
+.project-title::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("/assets/components/projects/project-title-eliips.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 25px;
+}
+
+.project-explanation {
+  font-size: 18px;
+  padding-left: 50px;
+  line-height: 120%;
+}
+
+.project-visit {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.project-tech {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.tech {
+  color: var(--secondary-text-color-light);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.tech-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.project-poster {
+  width: 500px;
+  height: 350px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+
+.project-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.project-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.blue {
+  background-color: var(--text-blue-color);
+  color: var(--primary-color-background);
+  transition: all 0.3s ease-in-out;
+}
+
+.blue:hover {
+  background-color: var(--secondary-text-color-light);
+  border: 1px solid var(--secondary-text-color-light);
+}
+
+/* REFERENCE */
+
+.references {
+  width: 1440px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 80px; */
+}
+
+.reference-container {
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 65px;
+  scroll-margin-top: 100px;
+}
+
+.reference-title {
+  color: var(--text-blue-color);
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.bubble-boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.bubble-content {
+  width: 400px;
+  height: 400px;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.bubble-content::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: url("../assets/components/reference/bubble-bg-default.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-in-out;
+}
+
+.bubble-content:hover::before {
+  background-image: url("../assets/components/reference/bubble-bg-hover.png");
+  background-size: contain;
+}
+
+.ref-name {
+  color: var(--secondary-text-color-light);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.ref-project {
+  color: var(--secondary-text-color-light);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.ref-link {
+  color: var(--text-blue-color);
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.ref-comment {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 253, 253, 1);
+  text-align: center;
+  max-width: 290px;
+  margin-bottom: 48px;
+}
+
+.ref-comment-link {
+  color: var(--text-blue-color);
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+.ref-comment-link:hover {
+  color: var(--secondary-text-color-light); /* funktioniert nicht !!*/
+}
