@@ -30,17 +30,7 @@ const translations = {
     formEmail: "Ihre E-Mail",
     formMessage: "Ihre Nachricht",
     formBtn: "Senden",
-    duration1: "Zeitplan: 5 Wochen",
-    aboutProjectTitle: "übers Projekt",
-    aboutProjectExplanation1:
-      "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Salsaflaschen zu sammeln, um gegen die Hühner und den Endboss zu kämpfen.",
-    organaizeTitle: "So habe ich meinen Arbeitsprozess organisiert",
-    organiseText1:
-      "Die Aufteilung des Codes in separate Klassen sorgt für eine saubere und wartbare Codebasis. Jede Klasse ist für ein bestimmtes Spielobjekt verantwortlich und enthält ausschließlich die Spiellogik, für die sie zuständig ist.",
-    soloProjectLearn: "Meine Erkenntnisse",
-    learnExplanation:
-      "Als jemand, der ständig neue Technologien kennenlernen möchte, hat mir die Arbeit an diesem Projekt viel Freude bereitet. Sie ermöglichte es mir, mich intensiv mit objektorientierter Programmierung (OOP) in JavaScript sowie mit dem HTML-Canvas auseinanderzusetzen.",
-    tech: "Technologien",
+
     legalNoticeTitle: "Impressum",
   },
   en: {
@@ -74,17 +64,6 @@ const translations = {
     formEmail: "Your Email",
     formMessage: "Your Message",
     formBtn: "Send",
-    duration1: "Duration: 5 weeks",
-    aboutProjectTitle: "About the project",
-    aboutProjectExplanation1:
-      "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe gather coins and Salsa bottles to fight against the chickens and Endboss.",
-    organaizeTitle: "How I have organised my work process",
-    organiseText1:
-      "Deviding the Scripts into separate classes keeps the code clean and maintainable, each class is responsible for a specific game object and includes only the game logic it is respnsible for.",
-    soloProjectLearn: "What I have learned",
-    learnExplanation:
-      "As someone who is always trying to learn new technologies, i enjoyed working on this project because it allowed me to delve deep into a OOP in JavaScript and Canvas in HTML.",
-    tech: "Technologies",
     legalNoticeTitle: "Legal Notice",
   },
 };
@@ -94,15 +73,15 @@ const rootHTML = document.getElementById("root-html");
 
 function changeLanguage(lang) {
   rootHTML.getAttribute("lang", lang);
-
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.getAttribute("data-i18n");
-
-    // if (translations[lang] && translations[lang][key])
     element.innerHTML = translations[lang][key];
   });
   updateLangIcon(lang);
   localStorage.setItem("prefferdLanguage", lang);
+  if (typeof window.updateProjectDisplay === "function") {
+    window.updateProjectDisplay(window.currentActiveProjectId);
+  }
 }
 
 function updateLangIcon(lang) {

@@ -1,0 +1,120 @@
+.animate-on-scroll .about-me-animation {
+  opacity: 0;
+  translate: -250%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+  transition-delay: 0.4s;
+}
+
+.animate-on-scroll .about-me-text {
+  opacity: 0;
+  translate: 100%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+}
+.animate-on-scroll.showWithAnimation .about-me-text,
+.animate-on-scroll.showWithAnimation .about-me-animation {
+  opacity: 1;
+  translate: 0;
+}
+
+.animate-on-scroll .skills-icons {
+  opacity: 0;
+  translate: -250%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+  transition-delay: 0.4s;
+}
+
+.animate-on-scroll .bubble-text {
+  opacity: 0;
+  translate: 100%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+}
+.animate-on-scroll.showWithAnimation .bubble-text,
+.animate-on-scroll.showWithAnimation .skills-icons {
+  opacity: 1;
+  translate: 0;
+}
+
+.animate-on-scroll .project-names,
+.animate-on-scroll .project-text {
+  opacity: 0;
+  translate: -250%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+  transition-delay: 0.4s;
+}
+
+.animate-on-scroll .project-visit {
+  opacity: 0;
+  translate: 100%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+}
+.animate-on-scroll.showWithAnimation .project-visit,
+.animate-on-scroll.showWithAnimation .project-names,
+.animate-on-scroll.showWithAnimation .project-text {
+  opacity: 1;
+  translate: 0;
+}
+
+.animate-on-scroll .bubble-content {
+  opacity: 0;
+  translate: -100%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+  transition-delay: 0.4s;
+}
+
+.animate-on-scroll .bubble-content:nth-of-type(1) {
+  opacity: 0;
+  translate: 50%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+  transition-delay: 0.8s;
+}
+
+.animate-on-scroll .bubble-content:nth-of-type(2) {
+  opacity: 0;
+  translate: 50%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+}
+
+.animate-on-scroll.showWithAnimation .bubble-content {
+  opacity: 1;
+  translate: 0;
+}
+
+.animate-on-scroll .contact-me-text-container {
+  opacity: 0;
+  translate: -250%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+  transition-delay: 0.4s;
+}
+
+.animate-on-scroll form {
+  opacity: 0;
+  translate: 100%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+}
+.animate-on-scroll.showWithAnimation .contact-me-text-container,
+.animate-on-scroll.showWithAnimation form {
+  opacity: 1;
+  translate: 0;
+}

@@ -209,58 +209,75 @@
         <div class="projects-container">
           <h2 class="section-title anta" data-i18n="thirdSectionTitle"></h2>
           <div class="projects-context josefin-sans">
-            <div class="project-names">
-              <a class="project-name-tab active" href="#">1. El Pollo Loco</a>
-              <a class="project-name-tab" href="">2. Join</a>
-              <a class="project-name-tab" href="">3. Pokedex</a>
-            </div>
+            <ul class="project-names">
+              <li class="project-name-tab active" data-id="project1">
+                1. El Pollo Loco
+              </li>
+
+              <li class="project-name-tab" data-id="project2">2. Join</li>
+              <li class="project-name-tab" data-id="project3">3. Pokedex</li>
+            </ul>
             <div class="project-info">
               <div class="project-text">
                 <div class="about-project">
                   <div class="titles">
                     <h3
                       class="project-title"
+                      id="about-title"
                       data-i18n="aboutProjectTitle"
                     ></h3>
-                    <h4 data-i18n="duration1"></h4>
+                    <h4 data-i18n="duration1" id="project-duration"></h4>
                   </div>
                   <p
                     class="project-explanation"
                     data-i18n="aboutProjectExplanation1"
+                    id="about-text"
                   ></p>
                 </div>
                 <div class="about-project">
-                  <h3 class="project-title" data-i18n="organaiseTitle"></h3>
-                  <p class="project-explanation" data-i18n="organiseText1"></p>
+                  <h3
+                    class="project-title"
+                    data-i18n="organaiseTitle"
+                    id="organise-title"
+                  ></h3>
+                  <p
+                    class="project-explanation"
+                    data-i18n="organiseText1"
+                    id="organise-text"
+                  ></p>
                 </div>
                 <div class="about-project">
-                  <h3 class="project-title" data-i18n="soloProjectLearn"></h3>
+                  <h3
+                    class="project-title"
+                    data-i18n="soloProjectLearn"
+                    id="learn-title"
+                  ></h3>
                   <p
                     class="project-explanation"
                     data-i18n="learnExplanation"
+                    id="learn-text"
                   ></p>
                 </div>
               </div>
               <div class="project-visit">
                 <div class="project-tech">
-                  <h4 class="tech" data-i18n="tech"></h4>
-                  <div class="tech-icon">
-                    <img src="assets/components/projects/HTML.svg" alt="" />
+                  <h4 class="tech" data-i18n="tech" id="tech-title"></h4>
+                  <div class="tech-icon" id="tech-icon">
+                    <!-- <img src="assets/components/projects/HTML.svg" alt="" />
                     <img src="assets/components/projects/CSS.svg" alt="" />
                     <img
                       src="assets/components/projects/Javascript.svg"
                       alt=""
-                    />
+                    /> -->
                   </div>
                 </div>
-                <div class="project-poster">
-                  <img src="assets/img/El-Pollo-loco.png" alt="El-Pollo-Loco" />
+                <div class="project-poster" id="project-photo">
+                  <img src="" alt="" />
                 </div>
                 <div class="project-btns">
                   <button
                     class="btn-primary blue"
                     id="liveTestBtn"
-                    data-i18n="liveTestBtn"
                     onclick="navigateToServer()"
                   >
                     Live Test
@@ -468,6 +485,7 @@
     </footer>
 
     <!-- JS -->
+    <script src="scripts/projects.js"></script>
     <script src="scripts/changingLanguage.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/scroll.js"></script>
