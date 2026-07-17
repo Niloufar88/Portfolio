@@ -94,13 +94,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 48px;
+  gap: 32px;
+  margin-top: 20px;
 }
 
 .skill-text p {
   color: var(--secondary-text-color-light);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
+  width: 70%;
+  text-align: center;
 }
 
 .skill-text .in-progress-container {

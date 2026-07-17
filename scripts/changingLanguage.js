@@ -30,8 +30,10 @@ const translations = {
     formEmail: "Ihre E-Mail",
     formMessage: "Ihre Nachricht",
     formBtn: "Senden",
-
     legalNoticeTitle: "Impressum",
+    learning: "Momentan vertiefe ich die Kenntnisse",
+    learnDesc:
+      "um meine Kenntnisse in der modernen Frontend-Entwicklung gezielt zu erweitern. TypeScript ermöglicht es mir, strukturierteren und wartbareren Code zu schreiben, während Angular mir hilft, komplexe und skalierbare Webanwendungen mit einer professionellen Architektur zu entwickeln.",
   },
   en: {
     LogoDevRole: "developer",
@@ -65,6 +67,9 @@ const translations = {
     formMessage: "Your Message",
     formBtn: "Send",
     legalNoticeTitle: "Legal Notice",
+    learning: "Currently I am deepening my knowledge",
+    learnDesc:
+      "to expand my knowledge in modern frontend development. TypeScript allows me to write more structured and maintainable code, while Angular helps me to develop complex and scalable web applications with a professional architecture.",
   },
 };
 

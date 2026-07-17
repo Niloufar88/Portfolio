@@ -20,13 +20,67 @@
   translate: 0;
 }
 
-.animate-on-scroll .skills-icons {
+.animate-on-scroll .skills-icons img {
+  opacity: 0;
+  translate: -250%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+  transition-delay: 0.1s;
+}
+
+.animate-on-scroll .skills-icons img:nth-of-type(1) {
+  opacity: 0;
+  translate: +150%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+  transition-delay: 0.25s;
+}
+
+.animate-on-scroll .skills-icons img:nth-of-type(2) {
   opacity: 0;
   translate: -250%;
   transition:
     opacity 0.6s ease-out,
     translate 0.6s ease-out;
   transition-delay: 0.4s;
+}
+
+.animate-on-scroll .skills-icons img:nth-of-type(3) {
+  opacity: 0;
+  translate: +100%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+  transition-delay: 0.55s;
+}
+
+.animate-on-scroll .skills-icons img:nth-of-type(4) {
+  opacity: 0;
+  translate: -250%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+  transition-delay: 0.7s;
+}
+
+.animate-on-scroll .skills-icons img:nth-of-type(5) {
+  opacity: 0;
+  translate: +100%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+  transition-delay: 0.85s;
+}
+
+.animate-on-scroll .skills-icons img:nth-of-type(6) {
+  opacity: 0;
+  translate: -250%;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out;
+  transition-delay: 0.9s;
 }
 
 .animate-on-scroll .bubble-text {
@@ -37,7 +91,7 @@
     translate 0.6s ease-out;
 }
 .animate-on-scroll.showWithAnimation .bubble-text,
-.animate-on-scroll.showWithAnimation .skills-icons {
+.animate-on-scroll.showWithAnimation .skills-icons img {
   opacity: 1;
   translate: 0;
 }
