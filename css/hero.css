@@ -130,7 +130,7 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
-.hero-social-media-container img:hover#email {
+.hero-social-media-container img:hover#email-icon {
   content: url("/assets/components/hero-section/icons/email-hover-blue.svg");
 }
 

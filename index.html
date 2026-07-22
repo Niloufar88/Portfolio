@@ -45,7 +45,7 @@
             <div class="hero-social-media-container">
               <a href="#"
                 ><img
-                  id="email"
+                  id="email-icon"
                   src="assets/components/hero-section/icons/email-default.svg"
                   alt="E-Mail"
               /></a>
@@ -373,24 +373,67 @@
           >
             <div class="contact-container">
               <div class="inputs">
-                <label for="name" data-i18n="formName"></label>
-                <input type="text" id="name" name="absender_name" required />
+                <label for="name" data-i18n="formName" id="name-text"></label>
+                <div class="input-div">
+                  <input
+                    type="text"
+                    id="name"
+                    name="absender_name"
+                    required
+                    onblur="validateName()"
+                  />
+                  <img
+                    src="assets/components/contact/🦆 icon _done_.svg"
+                    alt=""
+                    id="name-done"
+                  />
+                </div>
               </div>
+
               <div class="inputs">
-                <label for="email" data-i18n="formEmail"></label>
-                <input type="email" id="email" name="absender_email" required />
+                <label
+                  for="email"
+                  data-i18n="formEmail"
+                  id="email-text"
+                ></label>
+                <div class="input-div">
+                  <input
+                    type="email"
+                    id="email"
+                    name="absender_email"
+                    required
+                    onblur="validateEmail()"
+                  />
+                  <img
+                    src="assets/components/contact/🦆 icon _done_.svg"
+                    alt=""
+                    id="email-done"
+                  />
+                </div>
               </div>
             </div>
 
             <div class="message-container">
               <div class="inputs">
-                <label for="message" data-i18n="formMessage"></label>
-                <input
-                  type="text"
-                  id="message"
-                  name="absender_message"
-                  required
-                />
+                <label
+                  for="message"
+                  data-i18n="formMessage"
+                  id="message-text"
+                ></label>
+                <div class="input-div">
+                  <input
+                    type="text"
+                    id="message"
+                    name="absender_message"
+                    required
+                    onblur="validateMessage()"
+                  />
+                  <img
+                    src="assets/components/contact/🦆 icon _done_.svg"
+                    alt=""
+                    id="message-done"
+                  />
+                </div>
               </div>
             </div>
             <div class="privacy-policy">
@@ -400,15 +443,14 @@
                   I've read the <a href="#">privacy policy </a> and agree to the
                   processing of my data as outlined.
                 </label>
-                <div class="error-msg" data-i18n="errorMsg">
-                  Please accept the privacy policy.
-                </div>
               </div>
 
               <button
                 type="submit"
+                id="submit-btn"
                 class="send btn-primary"
                 data-i18n="formBtn"
+                disabled
               ></button>
             </div>
           </form>
@@ -485,5 +527,6 @@
     <script src="scripts/script.js"></script>
     <script src="scripts/scroll.js"></script>
     <script src="scripts/typingEffect.js"></script>
+    <script src="scripts/contactForm.js"></script>
   </body>
 </html>

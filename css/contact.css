@@ -28,7 +28,7 @@
 .contact-me-text-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 32px;
 }
 
@@ -121,6 +121,31 @@
   margin-left: 20px;
 }
 
+.inputs label.error {
+  color: var(--error-color);
+}
+
+.inputs .input-div {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.inputs .input-div img {
+  display: none;
+}
+
+.inputs .input-div #name-done.valid-icon,
+.inputs .input-div #email-done.valid-icon,
+.inputs .input-div #message-done.valid-icon {
+  display: block;
+  position: absolute;
+  right: 20px;
+}
+
 .inputs input {
   border: 1px solid var(--text-blue-color);
   height: 60px;
@@ -128,15 +153,23 @@
   width: 100%;
   background-color: transparent;
   padding: 20px;
+  color: var(--secondary-text-color-light);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "josefin sans";
+}
+
+.inputs input.error {
+  border: 1px solid var(--error-color);
+}
+
+#name.valid {
+  color: var(--secondary-text-color-light);
 }
 
 .inputs input:focus-within {
   background-color: var(--shape-bg-hover);
   outline: none;
-  color: var(--secondary-text-color-light);
-  font-family: "josefin sans";
-  font-size: 18px;
-  font-weight: 400;
 }
 
 .message-container {
@@ -172,7 +205,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-end;
   gap: 8px;
 }
 
@@ -203,6 +235,10 @@
   position: relative;
   padding-left: 30px;
   cursor: pointer;
+}
+
+.send {
+  align-self: flex-end;
 }
 
 .privacy-policy-text::before {
